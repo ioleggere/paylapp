@@ -14,3 +14,12 @@ export const paymentSchema = z.object({
     paymentDate: z.preprocess((arg) => new Date(arg as string), z.date()),
 }
 );
+
+export const editPaymentSchema = z.object({
+    value: z.number().positive(),
+    paymentDue: z.preprocess((arg) => new Date(arg as string), z.date()),
+    status: PaymentTypeSchema,
+    paymentValue: z.number(),
+    paymentDate: z.preprocess((arg) => new Date(arg as string), z.date()),
+}
+).partial();
