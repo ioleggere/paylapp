@@ -10,3 +10,7 @@ export const createPayment = (payment: Payment): Payment => {
 export const getPayments = (): Payment[] => {
     return payments;
 }
+
+export const getPayment = (id: number): Payment | undefined => {
+    return payments.find(payment => payment.id === id);
+}
