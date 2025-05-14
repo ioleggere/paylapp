@@ -32,6 +32,24 @@ Start the development server:
 npm run dev
 ```
 
+## 🐬 Running the Application with Docker
+
+Run the command below to run directly:
+
+```bash
+docker compose up -d
+```
+
+Or build and run the image:
+
+```bash
+docker build -t paylapp .
+```
+
+```bash
+docker run -p 3000:3000 paylapp
+```
+
 ## ▶️ Usage
 
 To create payments, use this route:
